@@ -57,6 +57,7 @@ impl<T: Clone> SimpleCache<T> {
     fn new() -> Self {
         Self(RefCell::new(HashMap::new()))
     }
+
 }
 
 impl<T: Clone> Cache<T> for SimpleCache<T> {
@@ -71,4 +72,5 @@ impl<T: Clone> Cache<T> for SimpleCache<T> {
             }
         }
     }
+    fn clear(&self) { todo!() }
 }
